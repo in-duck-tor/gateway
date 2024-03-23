@@ -1,0 +1,92 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v1/account",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/account",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/account/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/account/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/bank",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/bank",
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/bank/currency",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/bank/currency",
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/bank/account",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/api/v1/bank/account",
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/bank/account/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 7280
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/api/v1/bank/account/{everything}",
+      "SwaggerKey": "account"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "account",
+      "Config": [
+        {
+          "Name": "Account API",
+          "Version": "v1",
+          "Url": "http://account/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
