@@ -37,7 +37,6 @@ var webHostBuilder = WebHost.CreateDefaultBuilder(args)
 
         applicationBuilder
             .UseAuthentication()
-            // .UseOcelot((builder, configuration) => {  })
             .UseOcelot()
             .Wait();
     });
