@@ -4,7 +4,7 @@
       "DownstreamPathTemplate": "/api/v1/account",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "UpstreamPathTemplate": "/api/v1/account",
@@ -18,7 +18,7 @@
       "DownstreamPathTemplate": "/api/v1/account/{everything}",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "UpstreamPathTemplate": "/api/v1/account/{everything}",
@@ -32,7 +32,7 @@
       "DownstreamPathTemplate": "/api/v1/bank",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "UpstreamPathTemplate": "/api/v1/bank",
@@ -42,7 +42,7 @@
       "DownstreamPathTemplate": "/api/v1/bank/currency",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "UpstreamPathTemplate": "/api/v1/bank/currency",
@@ -52,7 +52,7 @@
       "DownstreamPathTemplate": "/api/v1/bank/account",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "AuthenticationOptions": {
@@ -66,7 +66,7 @@
       "DownstreamPathTemplate": "/api/v1/bank/account/{everything}",
       "DownstreamHostAndPorts": [
         {
-          "Host": "in-duck-tor.account"
+          "Host": "account.in-duck-tor"
         }
       ],
       "AuthenticationOptions": {
@@ -84,7 +84,7 @@
         {
           "Name": "Account API",
           "Version": "v1",
-          "Url": "http://in-duck-tor.account/swagger/v1/swagger.json"
+          "Url": "http://account.in-duck-tor/swagger/v1/swagger.json"
         }
       ]
     }
