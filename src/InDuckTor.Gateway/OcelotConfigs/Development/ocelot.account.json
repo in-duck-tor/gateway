@@ -1,6 +1,7 @@
 {
   "Routes": [
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/account",
       "DownstreamHostAndPorts": [
         {
@@ -15,6 +16,7 @@
       "SwaggerKey": "account"
     },
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/account/{everything}",
       "DownstreamHostAndPorts": [
         {
@@ -29,6 +31,7 @@
       "SwaggerKey": "account"
     },
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/bank",
       "DownstreamHostAndPorts": [
         {
@@ -39,6 +42,7 @@
       "SwaggerKey": "account"
     },
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/bank/currency",
       "DownstreamHostAndPorts": [
         {
@@ -49,6 +53,7 @@
       "SwaggerKey": "account"
     },
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/bank/account",
       "DownstreamHostAndPorts": [
         {
@@ -63,6 +68,7 @@
       "SwaggerKey": "account"
     },
     {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/bank/account/{everything}",
       "DownstreamHostAndPorts": [
         {
