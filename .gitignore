@@ -284,3 +284,5 @@ global.json
 *.received.*
 
 src/InDuckTor.Account.HttpClient
+
+/src/InDuckTor.Gateway/ocelot.json

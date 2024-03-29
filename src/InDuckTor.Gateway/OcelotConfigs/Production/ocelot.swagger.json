@@ -1,0 +1,24 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "account",
+      "Config": [
+        {
+          "Name": "Account API",
+          "Version": "v1",
+          "Url": "http://account.in-duck-tor/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "credit",
+      "Config": [
+        {
+          "Name": "Credit API",
+          "Version": "v1",
+          "Url": "http://credit.in-duck-tor/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

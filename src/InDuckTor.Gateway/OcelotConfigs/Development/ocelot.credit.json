@@ -66,17 +66,5 @@
       "UpstreamPathTemplate": "/api/v1/program",
       "SwaggerKey": "credit"
     }
-  ],
-  "SwaggerEndPoints": [
-    {
-      "Key": "credit",
-      "Config": [
-        {
-          "Name": "Credit API",
-          "Version": "v1",
-          "Url": "http://credit.in-duck-tor/swagger/v1/swagger.json"
-        }
-      ]
-    }
   ]
 }
