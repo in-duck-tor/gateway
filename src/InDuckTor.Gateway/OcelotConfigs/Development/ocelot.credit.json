@@ -1,2 +1,81 @@
 {
+    "Routes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/pay/regularly",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/pay/regularly",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/paymentinfo",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/paymentinfo",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/client/{clientId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/client/{clientId}",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/application",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/application",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/program",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      "UpstreamPathTemplate": "/api/v1/program",
+      "SwaggerKey": "credit"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "credit",
+      "Config": [
+        {
+          "Name": "Credit API",
+          "Version": "v1",
+          "Url": "http://credit.in-duck-tor/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
 }
