@@ -1,2 +1,70 @@
 {
+    "Routes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/pay/regularly",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/pay/regularly",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/paymentinfo",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/paymentinfo",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/client/{clientId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/client/{clientId}",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/application",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/application",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/program",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/program",
+      "SwaggerKey": "credit"
+    }
+  ]
 }
