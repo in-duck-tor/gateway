@@ -35,6 +35,17 @@
     },
     {
       "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/overdue",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/overdue",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/loan/client/{clientId}",
       "DownstreamHostAndPorts": [
         {
