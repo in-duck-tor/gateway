@@ -35,6 +35,17 @@
     },
     {
       "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/loan/{loanId}/overdue",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "credit.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/loan/{loanId}/overdue",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/loan/client/{clientId}",
       "DownstreamHostAndPorts": [
         {
