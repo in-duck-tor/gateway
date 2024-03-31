@@ -19,6 +19,16 @@
           "Url": "http://localhost:5230/swagger/v1/swagger.json"
         }
       ]
+    },
+    {
+      "Key": "user",
+      "Config": [
+        {
+          "Name": "User API",
+          "Version": "v1",
+          "Url": "http://localhost:5189/swagger/v1/swagger.json"
+        }
+      ]
     }
   ]
 }

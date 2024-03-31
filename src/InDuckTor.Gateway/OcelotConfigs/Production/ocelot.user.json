@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/employee",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/employee",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "user"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/employee/permissions",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/employee/permissions",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "user"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/client",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/client",
+      "SwaggerKey": "user"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/ban/{userId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/ban/{userId}",
+      "SwaggerKey": "user"
+    }
+  ]
+}
