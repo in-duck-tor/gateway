@@ -19,6 +19,16 @@
         }
       ],
       "UpstreamPathTemplate": "/connect/{everything}"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/account/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "auth.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/account/{everything}"
     }
   ]
 }

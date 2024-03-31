@@ -21,6 +21,17 @@
         }
       ],
       "UpstreamPathTemplate": "/connect/{everything}"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/account/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5244
+        }
+      ],
+      "UpstreamPathTemplate": "/account/{everything}"
     }
   ]
 }
