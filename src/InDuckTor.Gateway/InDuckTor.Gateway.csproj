@@ -8,7 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="InDuckTor.Shared" Version="2.1.4" />
-      <PackageReference Include="InDuckTor.Shared.Security.Jwt" Version="2.0.2" />
+      <PackageReference Include="InDuckTor.Shared.Security.Jwt" Version="2.0.3" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
       <PackageReference Include="MMLib.SwaggerForOcelot" Version="8.1.0" />
       <PackageReference Include="Ocelot" Version="23.1.0" />
