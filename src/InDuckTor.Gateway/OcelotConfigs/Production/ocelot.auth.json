@@ -1,0 +1,24 @@
+{
+  "Routes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/.well-known/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "auth.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/.well-known/{everything}"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/connect/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "auth.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/{everything}"
+    }
+  ]
+}

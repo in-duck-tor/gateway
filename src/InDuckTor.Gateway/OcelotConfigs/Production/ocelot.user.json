@@ -51,6 +51,17 @@
       ],
       "UpstreamPathTemplate": "/api/v1/ban/{userId}",
       "SwaggerKey": "user"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/user/{id}/claims",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/user/{id}/claims",
+      "SwaggerKey": "user"
     }
   ]
 }

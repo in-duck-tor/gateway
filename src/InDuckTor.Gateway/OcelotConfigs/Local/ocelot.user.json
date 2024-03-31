@@ -55,6 +55,18 @@
       ],
       "UpstreamPathTemplate": "/api/v1/ban/{userId}",
       "SwaggerKey": "user"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/user/{id}/claims",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5189
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/user/{id}/claims",
+      "SwaggerKey": "user"
     }
   ]
 }

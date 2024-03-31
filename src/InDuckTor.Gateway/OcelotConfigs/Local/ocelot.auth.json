@@ -1,0 +1,26 @@
+{
+  "Routes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/.well-known/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5244
+        }
+      ],
+      "UpstreamPathTemplate": "/.well-known/{everything}"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/connect/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5244
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/{everything}"
+    }
+  ]
+}
