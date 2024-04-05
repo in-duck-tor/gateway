@@ -1,5 +1,5 @@
 {
-    "Routes": [
+  "Routes": [
     {
       "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/loan/{loanId}/pay/regularly",
@@ -75,6 +75,66 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1/program",
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/loan/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/loan/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/application/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/application/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/program/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/program/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "credit"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/score",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5230
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/score",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       "SwaggerKey": "credit"
     }
   ]
