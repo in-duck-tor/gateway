@@ -109,7 +109,7 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
-      "UpstreamPathTemplate": "/api/v1/bank/account",
+      "UpstreamPathTemplate": "/api/v1/bank/account/{everything}",
       "SwaggerKey": "account"
     },
     {
@@ -124,7 +124,7 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
-      "UpstreamPathTemplate": "/api/v2/bank/account/{everything}",
+      "UpstreamPathTemplate": "/api/v2/bank/account",
       "SwaggerKey": "account"
     },
     {
