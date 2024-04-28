@@ -6,7 +6,7 @@
         {
           "Name": "Account API",
           "Version": "v1",
-          "Url": "http://account.in-duck-tor/swagger/v1/swagger.json"
+          "Url": "http://account-api.in-duck-tor/swagger/v1/swagger.json"
         }
       ]
     },

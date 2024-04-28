@@ -32,6 +32,36 @@
     },
     {
       "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/account",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "account-api.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/account",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/account/{everything}",
+      "DownstreamHostAndPorts": [
+{
+          "Host": "localhost", "Port": 5229
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v2/account/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/api/v1/bank",
       "DownstreamHostAndPorts": [
         {
@@ -80,6 +110,36 @@
         "AllowedScopes": []
       },
       "UpstreamPathTemplate": "/api/v1/bank/account/{everything}",
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/bank/account",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5229
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/api/v2/bank/account/{everything}",
+      "SwaggerKey": "account"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v2/bank/account/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", "Port": 5229
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/api/v2/bank/account/{everything}",
       "SwaggerKey": "account"
     }
   ]
