@@ -29,6 +29,16 @@
           "Url": "http://user.in-duck-tor/swagger/v1/swagger.json"
         }
       ]
+    },
+    {
+      "Key": "vestnik",
+      "Config": [
+        {
+          "Name": "Vestnik API",
+          "Version": "v1",
+          "Url": "http://vestnik.in-duck-tor/swagger/v1/swagger.json"
+        }
+      ]
     }
   ]
 }
