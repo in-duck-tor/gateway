@@ -9,6 +9,13 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1/ws/vestnik/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKeys": [
+          "Bearer",
+          "QueryToken"
+        ],
+        "AllowedScopes": []
+      },
       "SwaggerKey": "vestnik"
     },
     {
