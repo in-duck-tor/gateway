@@ -1,6 +1,6 @@
+using InDuckTor.Gateway.Configurations;
 using InDuckTor.Shared.Security.Jwt;
 using Microsoft.AspNetCore;
-using Microsoft.OpenApi.Models;
 using MMLib.SwaggerForOcelot.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
@@ -17,11 +17,15 @@ var webHostBuilder = WebHost.CreateDefaultBuilder(args)
     })
     .ConfigureServices((context, services) =>
     {
+        var jwtConfig = context.Configuration.GetSection(nameof(JwtSettings));
+        services.ConfigureQueryAccessToken(nameof(context.Configuration), jwtConfig);
         services.AddEndpointsApiExplorer();
-        services.AddInDuckTorAuthentication(context.Configuration.GetSection(nameof(JwtSettings)));
+        services.AddInDuckTorAuthentication(jwtConfig);
         services.AddOcelot();
-        services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new OpenApiInfo { Title = "Api Gateway", Version = "v1" }); });
-        services.AddSwaggerForOcelot(context.Configuration, options => { options.GenerateDocsForGatewayItSelf = true; });
+        services.AddSwaggerGen(
+            options => { options.SwaggerDoc("v1", new() { Title = "Api Gateway", Version = "v1" }); });
+        services.AddSwaggerForOcelot(context.Configuration,
+            options => { options.GenerateDocsForGatewayItSelf = true; });
     })
     .Configure((context, applicationBuilder) =>
     {
