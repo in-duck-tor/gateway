@@ -2,13 +2,13 @@
   "Routes": [
     {
       "DownstreamScheme": "http",
-      "DownstreamPathTemplate": "/api/v1/ws/vestnik/{everything}",
+      "DownstreamPathTemplate": "/api/v1/ws/vestnik/{any-hub}/negotiate",
       "DownstreamHostAndPorts": [
         {
           "Host": "vestnik.in-duck-tor"
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/ws/vestnik/{everything}",
+      "UpstreamPathTemplate": "/api/v1/ws/vestnik/{any-hub}/negotiate",
       "AuthenticationOptions": {
         "AuthenticationProviderKeys": [
           "Bearer",
@@ -16,6 +16,17 @@
         ],
         "AllowedScopes": []
       },
+      "SwaggerKey": "vestnik"
+    },
+    {
+      "DownstreamScheme": "ws",
+      "DownstreamPathTemplate": "/api/v1/ws/vestnik/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vestnik.in-duck-tor"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/ws/vestnik/{everything}",
       "SwaggerKey": "vestnik"
     },
     {

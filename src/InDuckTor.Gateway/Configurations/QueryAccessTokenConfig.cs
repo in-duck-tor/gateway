@@ -4,7 +4,7 @@ namespace InDuckTor.Gateway.Configurations;
 
 public static class QueryAccessTokenConfig
 {
-    private const string ProviderKey = "QueryToken";
+    public const string ProviderKey = "QueryToken";
 
     public static void ConfigureQueryAccessToken(this IServiceCollection serviceCollection,
         string configurationName,

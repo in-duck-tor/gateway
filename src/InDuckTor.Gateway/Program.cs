@@ -1,6 +1,7 @@
 using InDuckTor.Gateway.Configurations;
 using InDuckTor.Shared.Security.Jwt;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using MMLib.SwaggerForOcelot.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
@@ -20,7 +21,12 @@ var webHostBuilder = WebHost.CreateDefaultBuilder(args)
         var jwtConfig = context.Configuration.GetSection(nameof(JwtSettings));
         services.ConfigureQueryAccessToken(nameof(context.Configuration), jwtConfig);
         services.AddEndpointsApiExplorer();
-        services.AddInDuckTorAuthentication(jwtConfig);
+        services.AddInDuckTorAuthentication(jwtConfig)
+            .AddAuthorizationBuilder()
+            .SetDefaultPolicy(new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .AddAuthenticationSchemes("Bearer", QueryAccessTokenConfig.ProviderKey)
+                .Build());
         services.AddOcelot();
         services.AddSwaggerGen(
             options => { options.SwaggerDoc("v1", new() { Title = "Api Gateway", Version = "v1" }); });
@@ -36,6 +42,7 @@ var webHostBuilder = WebHost.CreateDefaultBuilder(args)
 
         applicationBuilder
             .UseAuthentication()
+            .UseWebSockets()
             .UseOcelot()
             .Wait();
     });
