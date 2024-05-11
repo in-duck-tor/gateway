@@ -18,6 +18,7 @@ RUN dotnet publish -c Release -o ./publish/ --no-restore
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 as runtime
 VOLUME /app/certs
 VOLUME /app/keys
+COPY /root/in-duck-tor/Keys/PrivateKey.xml /app/keys/_data
 WORKDIR /app
 COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://*:80
